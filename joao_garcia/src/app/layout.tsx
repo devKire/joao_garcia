@@ -11,9 +11,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Bella Vita - Salão de Beleza",
+  title: "João Garcia - Fotógrafo",
   description:
-    "Desperte sua beleza natural com nossos tratamentos exclusivos. Mais de 10 anos cuidando da sua autoestima com carinho e profissionalismo.",
+    "Portfólio de João Garcia, fotógrafo especializado em capturar momentos inesquecíveis com sensibilidade e criatividade.",
 };
 
 export default function RootLayout({
