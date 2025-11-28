@@ -21,58 +21,6 @@ const SectionPortfolio = ({ contact, landingpage }: SectionPortfolioProps) => {
   const categories = ["Todos", "Ensaios", "Casamentos", "Eventos", "Retratos"];
 
   const portfolioItems = [
-    // Fotos do seed - Casamento (6 fotos)
-    {
-      id: 1,
-      category: "Casamento",
-      image:
-        "https://qmpdo1utase5f4gf.public.blob.vercel-storage.com/casamento/casamento01.webp",
-      title: "Casamento ",
-      description: "Cerimônia de casamento registrada com amor",
-    },
-    {
-      id: 2,
-      category: "Casamento",
-      image:
-        "https://qmpdo1utase5f4gf.public.blob.vercel-storage.com/casamento/casamento02.webp",
-      title: "Casamento ",
-      description: "Momento especial do grande dia",
-    },
-    {
-      id: 3,
-      category: "Casamento",
-      image:
-        "https://qmpdo1utase5f4gf.public.blob.vercel-storage.com/casamento/casamento03.webp",
-      title: "Casamento ",
-      description: "Detalhes que fazem a diferença",
-    },
-
-    // Fotos do seed - Aniversário (4 fotos)
-    {
-      id: 11,
-      category: "Aniversário",
-      image:
-        "https://qmpdo1utase5f4gf.public.blob.vercel-storage.com/aniversario/aniversario01.jpg",
-      title: "Aniversário ",
-      description: "Celebração da vida e alegria",
-    },
-    {
-      id: 12,
-      category: "Aniversário",
-      image:
-        "https://qmpdo1utase5f4gf.public.blob.vercel-storage.com/aniversario/aniversario02.jpg",
-      title: "Aniversário ",
-      description: "Ensaio individual cheio de estilo",
-    },
-    {
-      id: 13,
-      category: "Aniversário",
-      image:
-        "https://qmpdo1utase5f4gf.public.blob.vercel-storage.com/aniversario/aniversario03.jpg",
-      title: "Aniversário ",
-      description: "Visões  criativas para momentos especiais",
-    },
-
     // Fotos que você já tinha (9 fotos do Pexels)
     {
       id: 15,

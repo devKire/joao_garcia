@@ -2,7 +2,7 @@
 
 import { ContactInfo, LandingPage } from "@prisma/client";
 import { motion } from "framer-motion";
-import { ArrowDown,ArrowRight, Camera, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, Camera, Sparkles } from "lucide-react";
 import React from "react";
 
 interface SectionHeroProps {
@@ -144,7 +144,7 @@ const SectionHero = ({ contact, landingpage }: SectionHeroProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+            className="relative flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <motion.button
               whileHover={{
@@ -175,6 +175,23 @@ const SectionHero = ({ contact, landingpage }: SectionHeroProps) => {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
             </motion.button>
+
+            {/* Scroll Indicator próximo aos botões */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              className="absolute top-1/2 -right-4 -translate-y-1/2 transform sm:top-full sm:right-0 sm:mt-8 sm:translate-y-0"
+            >
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="cursor-pointer rounded-full bg-white/20 p-3 backdrop-blur-sm transition-all duration-300 hover:bg-white/30 hover:shadow-lg"
+                onClick={scrollToAbout}
+              >
+                <ArrowDown className="h-6 w-6 text-white" />
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           {/* Estatísticas */}
@@ -182,7 +199,7 @@ const SectionHero = ({ contact, landingpage }: SectionHeroProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 grid grid-cols-3 gap-8 text-center"
+            className="mt-12 mb-12 grid grid-cols-3 gap-8 text-center"
           >
             {[
               { number: "500+", label: "Ensaios" },
@@ -204,23 +221,6 @@ const SectionHero = ({ contact, landingpage }: SectionHeroProps) => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 transform"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="cursor-pointer rounded-full bg-white/10 p-2 backdrop-blur-sm"
-            onClick={scrollToAbout}
-          >
-            <ArrowDown className="h-5 w-5 text-white" />
           </motion.div>
         </motion.div>
       </div>

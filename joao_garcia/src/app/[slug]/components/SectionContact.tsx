@@ -121,29 +121,29 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
   return (
     <section
       id="contato"
-      className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-black py-20 text-white lg:py-28"
+      className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-black py-12 text-white sm:py-16 lg:py-28"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 h-32 w-32 rounded-full border-2 border-yellow-400"></div>
-        <div className="absolute right-20 bottom-20 h-24 w-24 rounded-full border-2 border-yellow-400"></div>
-        <div className="absolute top-1/2 left-1/4 h-16 w-16 rounded-full border-2 border-yellow-400"></div>
-        <div className="absolute right-1/3 bottom-1/4 h-20 w-20 rounded-full border-2 border-yellow-400"></div>
+        <div className="absolute top-4 left-4 h-20 w-20 rounded-full border-2 border-yellow-400 sm:top-10 sm:left-10 sm:h-32 sm:w-32"></div>
+        <div className="absolute right-5 bottom-5 h-16 w-16 rounded-full border-2 border-yellow-400 sm:right-20 sm:bottom-20 sm:h-24 sm:w-24"></div>
+        <div className="absolute top-1/2 left-1/6 h-12 w-12 rounded-full border-2 border-yellow-400 sm:left-1/4 sm:h-16 sm:w-16"></div>
+        <div className="absolute right-1/4 bottom-1/6 h-14 w-14 rounded-full border-2 border-yellow-400 sm:right-1/3 sm:bottom-1/4 sm:h-20 sm:w-20"></div>
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="mb-16 text-center">
+      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={ref} className="mb-12 text-center sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center space-x-2 rounded-full bg-yellow-500/20 px-4 py-2 backdrop-blur-sm"
+            className="inline-flex items-center space-x-2 rounded-full bg-yellow-500/20 px-3 py-1 backdrop-blur-sm sm:px-4 sm:py-2"
           >
-            <Camera className="h-4 w-4 text-yellow-400" />
-            <span className="font-poppins text-sm font-medium text-yellow-300">
+            <Camera className="h-3 w-3 text-yellow-400 sm:h-4 sm:w-4" />
+            <span className="font-poppins text-xs font-medium text-yellow-300 sm:text-sm">
               Vamos Conversar?
             </span>
           </motion.div>
@@ -152,7 +152,7 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-playfair mb-4 text-4xl font-bold lg:text-5xl"
+            className="font-playfair mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl xl:text-5xl"
           >
             Pronto para{" "}
             <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
@@ -164,7 +164,7 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-poppins mx-auto mb-8 max-w-2xl text-lg text-gray-300"
+            className="font-poppins mx-auto mb-6 max-w-2xl text-base text-gray-300 sm:mb-8 sm:text-lg"
           >
             Entre em contato e vamos criar algo incrível juntos.
             <span className="font-semibold text-yellow-400">
@@ -183,54 +183,56 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
             }}
             whileTap={{ scale: 0.95 }}
             onClick={openWhatsApp}
-            className="font-poppins group mb-12 inline-flex items-center space-x-3 rounded-full bg-yellow-500 px-8 py-4 font-semibold text-black shadow-lg transition-all duration-300 hover:bg-yellow-400"
+            className="font-poppins group mb-8 inline-flex items-center space-x-2 rounded-full bg-yellow-500 px-6 py-3 text-sm font-semibold text-black shadow-lg transition-all duration-300 hover:bg-yellow-400 sm:mb-12 sm:space-x-3 sm:px-8 sm:py-4 sm:text-base"
           >
-            <MessageCircle className="h-5 w-5" />
+            <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
             <span>Conversar no WhatsApp</span>
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 sm:h-4 sm:w-4" />
           </motion.button>
         </div>
 
-        <div className="grid items-start gap-12 lg:grid-cols-2">
+        <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="font-playfair mb-6 text-2xl font-bold text-yellow-400">
+              <h3 className="font-playfair mb-4 text-xl font-bold text-yellow-400 sm:mb-6 sm:text-2xl">
                 Informações de Contato
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.label}
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                    className={`flex items-center space-x-4 rounded-xl p-4 transition-all duration-300 ${
+                    className={`flex items-center space-x-3 rounded-xl p-3 transition-all duration-300 sm:space-x-4 sm:p-4 ${
                       info.action
                         ? "cursor-pointer bg-white/5 hover:scale-105 hover:bg-white/10"
                         : "bg-white/5"
                     }`}
                     onClick={info.action || undefined}
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
-                      <info.icon className={`h-6 w-6 ${info.color}`} />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 sm:h-12 sm:w-12">
+                      <info.icon
+                        className={`h-5 w-5 ${info.color} sm:h-6 sm:w-6`}
+                      />
                     </div>
-                    <div className="flex-1">
-                      <div className="font-poppins font-semibold text-white">
+                    <div className="min-w-0 flex-1">
+                      <div className="font-poppins text-sm font-semibold text-white sm:text-base">
                         {info.label}
                       </div>
-                      <div className="font-poppins text-gray-300">
+                      <div className="font-poppins truncate text-xs text-gray-300 sm:text-sm">
                         {info.value}
                       </div>
                     </div>
                     {info.action && (
-                      <ArrowRight className="h-4 w-4 text-yellow-400" />
+                      <ArrowRight className="h-4 w-4 flex-shrink-0 text-yellow-400" />
                     )}
                   </motion.div>
                 ))}
@@ -239,11 +241,11 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
 
             {/* Social Links */}
             <div>
-              <h3 className="font-playfair mb-6 text-2xl font-bold text-yellow-400">
+              <h3 className="font-playfair mb-4 text-xl font-bold text-yellow-400 sm:mb-6 sm:text-2xl">
                 Redes Sociais
               </h3>
 
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.button
                     key={social.label}
@@ -253,10 +255,12 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={social.action}
-                    className={`${social.color} flex h-12 w-12 items-center justify-center rounded-full shadow-lg transition-all duration-300`}
+                    className={`${social.color} flex h-10 w-10 items-center justify-center rounded-full shadow-lg transition-all duration-300 sm:h-12 sm:w-12`}
                     title={social.label}
                   >
-                    <social.icon className={`h-5 w-5 ${social.iconColor}`} />
+                    <social.icon
+                      className={`h-4 w-4 ${social.iconColor} sm:h-5 sm:w-5`}
+                    />
                   </motion.button>
                 ))}
               </div>
@@ -267,12 +271,12 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1 }}
-              className="rounded-2xl bg-gradient-to-r from-yellow-500/10 to-yellow-400/5 p-6 backdrop-blur-sm"
+              className="rounded-xl bg-gradient-to-r from-yellow-500/10 to-yellow-400/5 p-4 backdrop-blur-sm sm:rounded-2xl sm:p-6"
             >
-              <h4 className="font-poppins mb-3 font-semibold text-yellow-400">
+              <h4 className="font-poppins mb-2 text-sm font-semibold text-yellow-400 sm:mb-3 sm:text-base">
                 💡 Informações Importantes
               </h4>
-              <ul className="font-poppins space-y-2 text-sm text-gray-300">
+              <ul className="font-poppins space-y-1 text-xs text-gray-300 sm:space-y-2 sm:text-sm">
                 <li>• Orçamento gratuito e sem compromisso</li>
                 <li>• Atendimento em estúdio ou externo</li>
                 <li>• Pagamento parcelado em até 12x</li>
@@ -288,29 +292,29 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-xl shadow-2xl sm:rounded-2xl">
               <Image
                 src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                 alt="Estúdio de fotografia"
                 width={600}
                 height={400}
-                className="h-[400px] w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-[300px] w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-[400px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
               {/* Overlay Content */}
-              <div className="absolute right-0 bottom-0 left-0 p-6">
-                <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
-                  <h4 className="font-playfair mb-2 text-xl font-bold text-white">
+              <div className="absolute right-0 bottom-0 left-0 p-4 sm:p-6">
+                <div className="rounded-xl bg-white/10 p-4 backdrop-blur-sm sm:rounded-2xl sm:p-6">
+                  <h4 className="font-playfair mb-1 text-lg font-bold text-white sm:mb-2 sm:text-xl">
                     📸 Estúdio São Paulo
                   </h4>
-                  <p className="font-poppins text-sm text-gray-200">
+                  <p className="font-poppins text-xs text-gray-200 sm:text-sm">
                     Atendimento personalizado em estúdio profissional ou em
                     locação externa. Equipamento de última geração e ambiente
                     climatizado.
                   </p>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="mt-3 flex flex-wrap gap-1 sm:mt-4 sm:gap-2">
                     {[
                       "Estúdio Profissional",
                       "Equipamento Top",
@@ -319,7 +323,7 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
                     ].map((feature) => (
                       <span
                         key={feature}
-                        className="rounded-full bg-yellow-500/20 px-3 py-1 text-xs font-medium text-yellow-300"
+                        className="rounded-full bg-yellow-500/20 px-2 py-1 text-xs font-medium text-yellow-300 sm:px-3"
                       >
                         {feature}
                       </span>
@@ -333,10 +337,10 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute -top-4 -right-4"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4"
               >
-                <div className="rounded-2xl bg-yellow-500 px-4 py-2 shadow-lg">
-                  <span className="font-poppins text-sm font-semibold text-black">
+                <div className="rounded-xl bg-yellow-500 px-3 py-1 shadow-lg sm:rounded-2xl sm:px-4 sm:py-2">
+                  <span className="font-poppins text-xs font-semibold text-black sm:text-sm">
                     🎯 Disponível
                   </span>
                 </div>
@@ -348,7 +352,7 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-6 grid grid-cols-2 gap-4"
+              className="mt-4 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-4"
             >
               {[
                 { icon: "📷", text: "Ensaios Externos" },
@@ -358,9 +362,9 @@ const SectionContact = ({ contact, landingpage }: SectionContactProps) => {
               ].map((service) => (
                 <div
                   key={service.text}
-                  className="rounded-xl bg-white/5 p-4 text-center backdrop-blur-sm"
+                  className="rounded-lg bg-white/5 p-3 text-center backdrop-blur-sm sm:rounded-xl sm:p-4"
                 >
-                  <div className="text-lg">{service.icon}</div>
+                  <div className="text-base sm:text-lg">{service.icon}</div>
                   <div className="font-poppins mt-1 text-xs text-gray-300">
                     {service.text}
                   </div>
